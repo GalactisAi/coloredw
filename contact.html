@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — COLORED Interior Designs</title>
+  <meta name="description" content="Get in touch with COLORED Interior Designs. Tell us about your space and we'll get back to you within 24 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-curtain"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+        <span class="logo__sub">Interior Designs</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__dropdown">
+            <a href="about.html" class="nav__link nav__dropdown-trigger">
+              About
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <ul class="nav__dropdown-menu">
+              <li><a href="about.html" class="nav__dropdown-item">About Us</a></li>
+              <li><a href="partners.html" class="nav__dropdown-item">Our Partners</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="what-we-do.html" class="nav__link nav__dropdown-trigger">
+              What We Do
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <ul class="nav__dropdown-menu">
+              <li><a href="services.html" class="nav__dropdown-item">Services</a></li>
+              <li><a href="process.html" class="nav__dropdown-item">Our Process</a></li>
+              <li><a href="why-choose-us.html" class="nav__dropdown-item">Why Choose Us</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="nav__link">Blog</a></li>
+          <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Consultation</a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main data-barba="wrapper">
+  <div data-barba="container" data-barba-namespace="contact">
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__breadcrumb reveal">
+        <a href="index.html">Home</a> / <span>Contact</span>
+      </div>
+      <h1 class="page-hero__title reveal">Let's Design Your Dream Home</h1>
+      <p class="page-hero__subtitle reveal">Tell us about your space and we'll get back to you within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT GRID ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact Form -->
+        <div class="reveal">
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210">
+              </div>
+              <div class="form-group">
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" name="city" class="form-input" placeholder="e.g. Chennai, Bangalore">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="property-type" class="form-label">Type of Property</label>
+                <select id="property-type" name="property_type" class="form-select">
+                  <option value="">Select</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="independent-house">Independent House</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="size" class="form-label">Approximate Size</label>
+                <select id="size" name="size" class="form-select">
+                  <option value="">Select</option>
+                  <option value="under-800">Under 800 sq ft</option>
+                  <option value="800-1200">800–1200 sq ft</option>
+                  <option value="1200-1800">1200–1800 sq ft</option>
+                  <option value="1800-2500">1800–2500 sq ft</option>
+                  <option value="above-2500">Above 2500 sq ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="budget" class="form-label">Budget Range</label>
+                <select id="budget" name="budget" class="form-select">
+                  <option value="">Select</option>
+                  <option value="5-10">₹5–10 Lakhs</option>
+                  <option value="10-20">₹10–20 Lakhs</option>
+                  <option value="20-35">₹20–35 Lakhs</option>
+                  <option value="35-50">₹35–50 Lakhs</option>
+                  <option value="above-50">Above ₹50 Lakhs</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select id="service" name="service" class="form-select">
+                  <option value="">Select</option>
+                  <option value="residential">Residential Interiors</option>
+                  <option value="kitchen">Kitchen Design</option>
+                  <option value="wardrobe">Wardrobe & Storage</option>
+                  <option value="consultation">Design Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project, timeline, and any specific requirements..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Send Your Enquiry</button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info & Map -->
+        <div class="reveal">
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">WhatsApp</div>
+                <div class="contact-info-item__value">+91 98765 43210</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Email</div>
+                <div class="contact-info-item__value">hello@coloredinteriors.in</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Office</div>
+                <div class="contact-info-item__value">123 Design Avenue, T. Nagar, Chennai 600017</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Working Hours</div>
+                <div class="contact-info-item__value">Mon–Sat, 10 AM – 7 PM</div>
+              </div>
+            </div>
+          </div>
+          <div class="map-placeholder">Map embed placeholder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADDITIONAL CTA ==================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center reveal">
+        <p class="section-subtitle centered" style="margin-bottom: var(--space-lg);">Book a free 30-minute design consultation call</p>
+        <a href="#" class="btn btn--primary btn--lg">Schedule Your Free Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+            <span class="logo__sub">Interior Designs</span>
+          </a>
+          <p class="footer__brand-text">We design homes that reflect who you are. Premium residential interiors, modular kitchens, and wardrobe solutions — crafted with care across India's leading cities.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Our Process</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Residential Interiors</a></li>
+            <li><a href="services.html#kitchen">Modular Kitchens</a></li>
+            <li><a href="services.html#wardrobe">Wardrobes &amp; Storage</a></li>
+            <li><a href="services.html">Space Planning</a></li>
+            <li><a href="services.html">Design Consultation</a></li>
+            <li><a href="services.html">Lighting Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Get in Touch</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>123 Design Avenue, T. Nagar,<br>Chennai 600017, India</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>hello@coloredinteriors.in</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Chennai · Bangalore · Hyderabad · Mumbai · Pune · Coimbatore</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 COLORED Interior Designs. All rights reserved.</span>
+        <span>Privacy Policy · Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+  </main>
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
