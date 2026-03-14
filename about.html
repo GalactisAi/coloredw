@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body>
   <div class="page-curtain"></div>
@@ -70,20 +70,76 @@
     </div>
   </section>
 
-  <!-- ==================== STUDIO STORY ==================== -->
-  <section class="section" id="studio-story">
+  <!-- ==================== WHY COLORED — BENTO GRID ==================== -->
+  <section class="section" id="why-colored">
     <div class="container">
-      <div class="split-section">
-        <div class="split-section__image reveal">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#e8e0d8 0%,#d4c8bc 50%,#c4b8ac 100%);display:flex;align-items:center;justify-content:center;color:#999;font-size:0.85rem;">Studio Image</div>
+      <div class="text-center reveal">
+        <span class="section-label">Why COLORED</span>
+        <h2 class="section-title">Born in Chennai, Built for Indian Homes</h2>
+        <p class="section-subtitle centered">We bring design excellence, transparent process, and lasting quality to every home we touch.</p>
+      </div>
+      <div class="bento spacer-top">
+
+        <!-- Card 1 — Light -->
+        <div class="bento__card bento__card--light reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">Fully Personalized Designs</h3>
+          <p class="bento__card-text">Your space, your style. We craft bespoke interiors tailored to your unique vision — no templates, only precision and creativity.</p>
         </div>
-        <div class="reveal">
-          <span class="section-label">Our Story</span>
-          <h2 class="section-title">Born in Chennai, Built for Indian Homes</h2>
-          <p class="section-subtitle" style="margin-bottom:var(--space-md);">COLORED started with a simple belief: every Indian home deserves design that feels personal, aspirational, and achievable. What began as a passion for residential interiors in Chennai has grown into a studio that serves families across India's leading metros.</p>
-          <p class="section-subtitle" style="margin-bottom:var(--space-md);">Our mission is to make high-quality interior design accessible — without the overwhelm. We believe in listening first, then designing. Your lifestyle, your rituals, your dreams for the space — they shape every decision we make.</p>
-          <p class="section-subtitle" style="margin-bottom:0;">From compact apartments to sprawling villas, we bring the same attention to detail and warmth to every project. Because at COLORED, we don't just design rooms — we craft the backdrop for your life.</p>
+
+        <!-- Card 2 — Dark -->
+        <div class="bento__card bento__card--dark reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">On-Time Delivery</h3>
+          <p class="bento__card-text">Punctuality meets perfection. We ensure your project is completed as promised, delivering stunning interiors on schedule.</p>
         </div>
+
+        <!-- Card 3 — Light -->
+        <div class="bento__card bento__card--light reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">Exceptional Material Quality</h3>
+          <p class="bento__card-text">Experience superior craftsmanship with materials selected for durability, elegance, and timeless appeal.</p>
+        </div>
+
+        <!-- Card 4 — Light -->
+        <div class="bento__card bento__card--light reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">Innovative Solutions</h3>
+          <p class="bento__card-text">Maximize function and aesthetics with cutting-edge designs, smart layouts, and modern modular solutions.</p>
+        </div>
+
+        <!-- Card 5 — Dark -->
+        <div class="bento__card bento__card--dark reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">After-Sales Support</h3>
+          <p class="bento__card-text">Our relationship doesn't end at handover. With dedicated service and warranty support, we're here long after completion.</p>
+        </div>
+
+        <!-- Card 6 — Light -->
+        <div class="bento__card bento__card--light reveal">
+          <div class="bento__card-header">
+            <svg class="bento__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <div class="bento__card-dots"></div>
+          </div>
+          <h3 class="bento__card-title">Seamless Project Management</h3>
+          <p class="bento__card-text">From concept to completion, we handle every detail. Enjoy a stress-free experience with our coordinated approach.</p>
+        </div>
+
       </div>
     </div>
   </section>

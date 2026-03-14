@@ -2172,6 +2172,118 @@ html.is-changing body {
   font-size: var(--fs-sm);
 }
 
+/* ---------- Premium Bento Card Grid (About Page) ---------- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bento__card {
+  border-radius: 18px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.1), 0 4px 16px rgba(0,0,0,.06);
+}
+
+.bento__card--light {
+  background: #F5F2EC;
+}
+
+.bento__card--dark {
+  background: #1E1E1E;
+}
+
+.bento__card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.bento__card-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.bento__card--light .bento__card-icon {
+  color: #C62828;
+}
+
+.bento__card--dark .bento__card-icon {
+  color: rgba(255,255,255,.35);
+}
+
+.bento__card-dots {
+  width: 72px;
+  height: 48px;
+  background-image: radial-gradient(circle, currentColor 1.2px, transparent 1.2px);
+  background-size: 12px 12px;
+  flex-shrink: 0;
+}
+
+.bento__card--light .bento__card-dots {
+  color: rgba(0,0,0,.1);
+}
+
+.bento__card--dark .bento__card-dots {
+  color: rgba(255,255,255,.1);
+}
+
+.bento__card-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-sm);
+}
+
+.bento__card--light .bento__card-title {
+  color: var(--c-charcoal);
+}
+
+.bento__card--dark .bento__card-title {
+  color: var(--c-white);
+}
+
+.bento__card-text {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  margin-bottom: 0;
+}
+
+.bento__card--light .bento__card-text {
+  color: var(--c-mid-gray);
+}
+
+.bento__card--dark .bento__card-text {
+  color: rgba(255,255,255,.5);
+}
+
+@media (max-width: 1024px) {
+  .bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+  .bento__card {
+    padding: 28px;
+  }
+}
+
 /* ---------- Case Study Snippets ---------- */
 .case-snippet {
   padding: var(--space-xl);
