@@ -1,6 +1,6 @@
 /* ============================================================
    COLORED Interior Designs — Main JavaScript
-   Lenis smooth scroll · GSAP ScrollTrigger · Barba.js transitions
+   Lenis smooth scroll · GSAP ScrollTrigger · Swup transitions
    ============================================================ */
 
 let lenis;
@@ -17,75 +17,82 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounterAnimation();
   initSpecialties();
   initProcessPage();
-  initBarba();
+  initSwup();
 });
 
-/* ---------- Barba.js Page Transitions ---------- */
-function initBarba() {
-  barba.init({
-    preventRunning: true,
-    timeout: 5000,
-    transitions: [{
-      name: 'slide-up',
-      leave({ current }) {
-        const toggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav__links');
-        if (toggle && navLinks && navLinks.classList.contains('mobile-open')) {
-          toggle.classList.remove('active');
-          navLinks.classList.remove('mobile-open');
-          document.body.style.overflow = '';
-        }
+/* ---------- Swup Page Transitions (Vertical Slide + Beige Overlay) ---------- */
+function initSwup() {
+  const swup = new Swup({
+    containers: ['#swup'],
+    animateHistoryBrowsing: true,
+  });
 
-        ScrollTrigger.getAll().forEach(t => t.kill());
-        if (lenis) { lenis.destroy(); lenis = null; }
+  swup.hooks.on('visit:start', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav__links');
+    if (toggle && navLinks && navLinks.classList.contains('mobile-open')) {
+      toggle.classList.remove('active');
+      navLinks.classList.remove('mobile-open');
+      document.body.style.overflow = '';
+    }
 
-        return gsap.to(current.container, {
-          y: -120,
-          opacity: 0,
-          duration: 0.5,
-          ease: 'power3.in',
-        });
-      },
-      enter({ next }) {
-        window.scrollTo(0, 0);
-        return gsap.from(next.container, {
-          y: 120,
-          opacity: 0,
-          duration: 0.5,
-          ease: 'power3.out',
-          clearProps: 'all',
-        });
-      },
-      after() {
-        window.scrollTo(0, 0);
-        initLenis();
-        initHeader();
-        initGSAPReveals();
-        initFAQ();
-        initAnchorScroll();
-        initProjectFilters();
-        initCounterAnimation();
-        initSpecialties();
-        initProcessPage();
-        updateActiveNav();
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    if (lenis) { lenis.destroy(); lenis = null; }
+  });
 
-        const hash = window.location.hash;
-        if (hash) {
-          const target = document.querySelector(hash);
-          if (target) {
-            setTimeout(() => {
-              const offset = document.querySelector('.header')?.offsetHeight || 80;
-              if (lenis) {
-                lenis.scrollTo(target, { offset: -offset, duration: 1.4 });
-              } else {
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-              }
-            }, 100);
+  swup.hooks.replace('animation:out:await', async () => {
+    const container = document.querySelector('#swup');
+    const overlay = document.querySelector('.page-overlay');
+
+    const tl = gsap.timeline();
+    tl.to(overlay, { opacity: 0.6, duration: 0.4, ease: 'power2.inOut' }, 0);
+    tl.to(container, { y: -120, opacity: 0, duration: 0.5, ease: 'power3.in' }, 0);
+    await tl;
+  });
+
+  swup.hooks.on('content:replace', () => {
+    window.scrollTo(0, 0);
+  });
+
+  swup.hooks.replace('animation:in:await', async () => {
+    const container = document.querySelector('#swup');
+    const overlay = document.querySelector('.page-overlay');
+
+    gsap.set(container, { y: 120, opacity: 0 });
+
+    const tl = gsap.timeline();
+    tl.to(container, { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out', clearProps: 'all' }, 0);
+    tl.to(overlay, { opacity: 0, duration: 0.4, ease: 'power2.inOut' }, 0.1);
+    await tl;
+  });
+
+  swup.hooks.on('visit:end', () => {
+    initLenis();
+    initHeader();
+    initGSAPReveals();
+    initFAQ();
+    initAnchorScroll();
+    initProjectFilters();
+    initCounterAnimation();
+    initSpecialties();
+    initProcessPage();
+    updateActiveNav();
+
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          const offset = document.querySelector('.header')?.offsetHeight || 80;
+          if (lenis) {
+            lenis.scrollTo(target, { offset: -offset, duration: 1.4 });
+          } else {
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
           }
-        }
+        }, 100);
       }
-    }]
+    }
   });
 }
 

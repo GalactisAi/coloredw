@@ -8,23 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
   <div class="page-curtain"></div>
+  <div class="page-overlay"></div>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="logo">
-        <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+        <span class="logo__main">COLO<span class="logo-red">R</span>ED</span>
         <span class="logo__sub">Interior Designs</span>
       </a>
       <nav class="nav">
         <ul class="nav__links">
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li class="nav__dropdown">
-            <a href="about.html" class="nav__link nav__dropdown-trigger">
+            <a class="nav__link nav__dropdown-trigger">
               About
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
@@ -34,7 +35,7 @@
             </ul>
           </li>
           <li class="nav__dropdown">
-            <a href="what-we-do.html" class="nav__link nav__dropdown-trigger active">
+            <a class="nav__link nav__dropdown-trigger active">
               What We Do
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
@@ -55,8 +56,7 @@
     </div>
   </header>
 
-  <main data-barba="wrapper">
-  <div data-barba="container" data-barba-namespace="services">
+  <main id="swup" class="transition-slide">
 
   <!-- ==================== PAGE HERO ==================== -->
   <section class="page-hero">
@@ -76,7 +76,7 @@
     <div class="container">
       <div class="service-detail reveal">
         <div class="service-detail__image">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#e8e0d8,#d4c8bc);display:flex;align-items:center;justify-content:center;color:#999;font-size:0.85rem;">Residential Interiors</div>
+          <img src="images/kitchen-1.png" alt="Modern residential interior with wooden ceiling and elegant furnishings">
         </div>
         <div class="service-detail__content">
           <h2 class="service-detail__title">Residential Interiors</h2>
@@ -110,7 +110,7 @@
     <div class="container">
       <div class="service-detail service-detail--reverse reveal">
         <div class="service-detail__image">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#dde0d8,#c4c8bc);display:flex;align-items:center;justify-content:center;color:#999;font-size:0.85rem;">Kitchen Design</div>
+          <img src="images/kitchen-2.png" alt="Modern modular kitchen with island, marble countertops and pendant lighting">
         </div>
         <div class="service-detail__content">
           <h2 class="service-detail__title">Kitchen Design</h2>
@@ -144,7 +144,7 @@
     <div class="container">
       <div class="service-detail reveal">
         <div class="service-detail__image">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#e0dbd8,#c8c0bc);display:flex;align-items:center;justify-content:center;color:#999;font-size:0.85rem;">Wardrobe & Storage</div>
+          <img src="images/wardrobe-2.png" alt="Custom built-in wardrobe with interior lighting and organized storage">
         </div>
         <div class="service-detail__content">
           <h2 class="service-detail__title">Wardrobe & Storage</h2>
@@ -269,7 +269,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="logo">
-            <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+            <span class="logo__main">COLO<span class="logo-red">R</span>ED</span>
             <span class="logo__sub">Interior Designs</span>
           </a>
           <p class="footer__brand-text">We design homes that reflect who you are. Premium residential interiors, modular kitchens, and wardrobe solutions — crafted with care across India's leading cities.</p>
@@ -328,10 +328,9 @@
     </div>
   </footer>
 
-  </div>
   </main>
 
-  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/swup@4"></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>

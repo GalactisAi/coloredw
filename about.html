@@ -8,23 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
   <div class="page-curtain"></div>
+  <div class="page-overlay"></div>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="logo">
-        <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+        <span class="logo__main">COLO<span class="logo-red">R</span>ED</span>
         <span class="logo__sub">Interior Designs</span>
       </a>
       <nav class="nav">
         <ul class="nav__links">
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li class="nav__dropdown">
-            <a href="about.html" class="nav__link nav__dropdown-trigger active">
+            <a class="nav__link nav__dropdown-trigger active">
               About
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
@@ -34,7 +35,7 @@
             </ul>
           </li>
           <li class="nav__dropdown">
-            <a href="what-we-do.html" class="nav__link nav__dropdown-trigger">
+            <a class="nav__link nav__dropdown-trigger">
               What We Do
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
@@ -55,8 +56,7 @@
     </div>
   </header>
 
-  <main data-barba="wrapper">
-  <div data-barba="container" data-barba-namespace="about">
+  <main id="swup" class="transition-slide">
 
   <!-- ==================== PAGE HERO ==================== -->
   <section class="page-hero">
@@ -136,43 +136,6 @@
     </div>
   </section>
 
-  <!-- ==================== MEET THE TEAM ==================== -->
-  <section class="section" id="team">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">The People Behind COLORED</span>
-        <h2 class="section-title">Meet the Team</h2>
-        <p class="section-subtitle centered">A small, passionate team committed to bringing your vision to life — with expertise, empathy, and attention to detail.</p>
-      </div>
-      <div class="team-grid spacer-top">
-        <div class="team-card reveal">
-          <div class="team-card__photo">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#e8e0d8,#d4c8bc);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:700;color:#7B1113;">S</div>
-          </div>
-          <h3 class="team-card__name">Srinivas</h3>
-          <p class="team-card__role">Founder & Principal Designer</p>
-          <p class="team-card__bio">With over a decade in residential interiors, Srinivas founded COLORED to bridge the gap between aspirational design and everyday living. He believes every home has a story waiting to be told.</p>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-card__photo">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#d8dce0,#bcc4c8);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:700;color:#7B1113;">P</div>
-          </div>
-          <h3 class="team-card__name">Priya</h3>
-          <p class="team-card__role">Design Lead</p>
-          <p class="team-card__bio">Priya brings a keen eye for materials and spatial flow to every project. She specialises in modular kitchens and storage solutions that marry function with elegance.</p>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-card__photo">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#e0dbd8,#c8c0bc);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:700;color:#7B1113;">R</div>
-          </div>
-          <h3 class="team-card__name">Ramesh</h3>
-          <p class="team-card__role">Project Manager</p>
-          <p class="team-card__bio">Ramesh ensures every project runs on time and on budget. His on-site supervision and vendor coordination keep quality consistent from concept to handover.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== CTA SECTION ==================== -->
   <section class="cta-band">
     <div class="container">
@@ -191,7 +154,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="logo">
-            <span class="logo__main">COLO<span class="logo-red">RED</span></span>
+            <span class="logo__main">COLO<span class="logo-red">R</span>ED</span>
             <span class="logo__sub">Interior Designs</span>
           </a>
           <p class="footer__brand-text">We design homes that reflect who you are. Premium residential interiors, modular kitchens, and wardrobe solutions — crafted with care across India's leading cities.</p>
@@ -250,10 +213,9 @@
     </div>
   </footer>
 
-  </div>
   </main>
 
-  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/swup@4"></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
