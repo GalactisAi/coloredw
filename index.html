@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 <body>
   <div class="page-curtain"></div>
@@ -22,7 +22,7 @@
         <span class="logo__sub">Interior Designs</span>
       </a>
       <nav class="nav">
-        <ul class="nav__links">
+        <ul class="nav__links" id="mobile-nav" role="navigation">
           <li><a href="index.html" class="nav__link active">Home</a></li>
           <li class="nav__dropdown">
             <a class="nav__link nav__dropdown-trigger">
@@ -47,9 +47,10 @@
           </li>
           <li><a href="blog.html" class="nav__link">Blog</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li class="mobile-nav-cta"><a href="contact.html" class="btn btn--primary btn--sm">Book a Consultation</a></li>
         </ul>
         <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Consultation</a>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </nav>
@@ -77,42 +78,6 @@
     </div>
   </section>
 
-  <!-- ==================== WHAT WE DO ==================== -->
-  <section class="section" id="what-we-do">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Interiors That Fit Your Life</h2>
-        <p class="section-subtitle centered">We specialize in residential interiors, modular kitchens, and custom wardrobes — designed for how you actually live, not just how a space looks in photos.</p>
-      </div>
-      <div class="grid grid-3 spacer-top">
-        <div class="service-card reveal">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 class="service-card__title">Residential Interiors</h3>
-          <p class="service-card__text">Complete home interior solutions — from living rooms and bedrooms to balconies and study nooks. We handle the full picture.</p>
-          <a href="services.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="11" x2="12" y2="15"/><line x1="10" y1="13" x2="14" y2="13"/></svg>
-          </div>
-          <h3 class="service-card__title">Modular Kitchens</h3>
-          <p class="service-card__text">Ergonomic, beautiful kitchens built with precision. Whether it's an L-shape, U-shape, or island — we make cooking a joy.</p>
-          <a href="services.html#kitchen" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="8" x2="20" y2="8"/><line x1="12" y1="8" x2="12" y2="22"/></svg>
-          </div>
-          <h3 class="service-card__title">Wardrobes & Storage</h3>
-          <p class="service-card__text">Walk-ins, sliding, hinged, or loft storage — we design wardrobes that use every inch smartly and look effortlessly elegant.</p>
-          <a href="services.html#wardrobe" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ==================== FEATURED SERVICES ==================== -->
   <section class="section section--gray" id="services">
